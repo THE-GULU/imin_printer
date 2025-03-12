@@ -248,9 +248,9 @@ public class IminPrinterPlugin implements FlutterPlugin, MethodCallHandler, Stre
             case "printText":
                 String text = call.argument("text");
                 if (iminPrintUtils != null) {
-                    iminPrintUtils.printText(text + "\n");
+                    iminPrintUtils.printText(text);
                 } else {
-                    PrinterHelper.getInstance().printText(text + "\n", null);
+                    PrinterHelper.getInstance().printText(text, null);
                 }
                 result.success(true);
                 break;
@@ -1056,7 +1056,7 @@ public class IminPrinterPlugin implements FlutterPlugin, MethodCallHandler, Stre
             case "printTextBitmap":
                 if (iminPrintUtils == null) {
                     String textStr = call.argument("text");
-                    PrinterHelper.getInstance().printTextBitmap(textStr + "\n", null);
+                    PrinterHelper.getInstance().printTextBitmap(textStr, null);
                 }
                 result.success(true);
                 break;
@@ -1064,7 +1064,7 @@ public class IminPrinterPlugin implements FlutterPlugin, MethodCallHandler, Stre
                 if (iminPrintUtils == null) {
                     String textBitmapString = call.argument("text");
                     int textBitmapAlign = call.argument("align");
-                    PrinterHelper.getInstance().printTextBitmapWithAli(textBitmapString + "\n", textBitmapAlign, null);
+                    PrinterHelper.getInstance().printTextBitmapWithAli(textBitmapString, textBitmapAlign, null);
                 }
                 result.success(true);
                 break;
