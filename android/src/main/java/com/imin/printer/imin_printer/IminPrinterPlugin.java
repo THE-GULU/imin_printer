@@ -536,7 +536,7 @@ public class IminPrinterPlugin implements FlutterPlugin, MethodCallHandler, Stre
                                 int barCodeFullPosition = call.argument("position");
                                 int barCodeFullHeight = call.argument("height");
                                 int barCodeFullWidth = call.argument("width");
-                                PrinterHelper.getInstance().printBarCodeWithFull(barCodeContent, barCodeType, barCodeFullWidth, barCodeFullHeight, barCodeAlign, barCodeFullPosition, null);
+                                PrinterHelper.getInstance().printBarCodeWithFull(barCodeContent, barCodeType, barCodeFullWidth, barCodeFullHeight, barCodeFullPosition, barCodeAlign, null);
                             } else {
                                 PrinterHelper.getInstance().printBarCodeWithAlign(barCodeContent, barCodeType, barCodeAlign, null);
                             }
